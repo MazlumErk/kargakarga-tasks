@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Variables
+@import './variables';
+
+// Pages
+@import './pages/home.scss';
+@import './pages/mobile.scss';
+@import './pages/kargakarga.scss';
+
+// Components
+@import './components/customButton.scss';
+
+// Components-Mobile
+@import './components/mNav.scss';
+@import './components/mUserAlert.scss';
+@import './components/mTitleBoard.scss';
+@import './components/mFormAndResults.scss';
+@import './components/mCustomInput.scss';
+
+// Components-Kargakarga
+@import './components/kNav.scss';
+@import './components/kLogo.scss';
+@import './components/kCustomNavButton.scss';
+@import './components/kCookie.scss';
+
+
+
+
+// global
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}

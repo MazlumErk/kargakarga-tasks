@@ -1,0 +1,28 @@
+.kCustomNavButton {
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 16px;
+  background: #0c0e0f;
+
+  border: 1px solid transparent;
+
+  color: white;
+
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.07px;
+
+  transition: 300ms;
+  &:hover {
+    background-color: white;
+    color: #0c0e0f;
+    border: 1px solid #0c0e0f;
+    cursor: pointer;
+  }
+}

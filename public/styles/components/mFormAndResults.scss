@@ -1,0 +1,42 @@
+.mFormAndResults {
+  width: 1130px;
+  height: min-content;
+  border-radius: 5px;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+
+  .inputFormTitle {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .inputExplanation {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .inputArea {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  .resultArea {
+  }
+}

@@ -1,0 +1,17 @@
+.kNav{
+    padding: 50px 70px;
+    width: 100%;
+    height: min-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .navButtons{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}

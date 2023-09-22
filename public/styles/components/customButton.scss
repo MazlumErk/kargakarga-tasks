@@ -1,0 +1,16 @@
+.customButton{
+    color : black;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    transition: 300ms;
+    &:hover{
+        background-color: black;
+        color: white;
+    }
+}
