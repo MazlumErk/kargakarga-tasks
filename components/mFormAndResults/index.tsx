@@ -1,100 +1,18 @@
-// React
-import { useEffect } from "react";
-
-const inputs = [
-  {
-    inputName: "Facilty",
-    id: "Facilty",
-    options: [
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-    ],
-  },
-  {
-    inputName: "Year",
-    id: "Year",
-    options: [
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-    ],
-  },
-  {
-    inputName: "Fuel Source",
-    id: "FuelSource",
-    options: [
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-    ],
-  },
-  {
-    inputName: "Fuel Type",
-    id: "FuelType",
-    options: [
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-    ],
-  },
-  {
-    inputName: "Fuel",
-    id: "Fuel",
-    options: [
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-      {
-        value: "s",
-        name: "s",
-      },
-    ],
-  },
-];
+// React js
+import { useEffect, useState } from "react";
 
 export default function MFormAndResults() {
+  // States
+  const [data, setData] = useState();
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // source
+  const [source, setSource] = useState("");
+  // fuel type
+  const [fuelType, setFuelType] = useState("");
+  // fuel
+  const [fuel, setFuel] = useState("");
+
   // Fonksiyonlar
   const getForms = async () => {
     try {
@@ -102,21 +20,21 @@ export default function MFormAndResults() {
         "http://3.86.79.133/dijital-mentorluk-backend-test/public/test-data",
         {
           method: "GET",
-          mode: "no-cors",
-
+          // mode: "no-cors",
+          headers: { "Content-type": "application/json" },
         }
       );
-      const data = await response.json()
-      console.log(data)
-      console.log("bitti");
+      setData(await response.json());
+      setIsLoaded(true);
+      console.log("Yüklendi");
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
   // useEffect
   useEffect(() => {
     getForms();
-  });
+  }, []);
   return (
     <div className="mFormAndResults">
       <div className="inputArea">
@@ -128,22 +46,92 @@ export default function MFormAndResults() {
           doldurun:
         </p>
         {/* Form */}
-        <form>
-          {inputs.map((input, index) => (
-            <div className="mCustomInput" key={index}>
-              <label className="customInputName">{input.inputName}</label>
+        {isLoaded ? (
+          <form>
+            {/* Facilty */}
+            <div className="mCustomInput">
+              <label className="customInputName">Facilty</label>
               <div className="customInputBorder">
-                <select id={input.id} name={input.inputName}>
-                  {input.options.map((option, index) => (
-                    <option value={option.value} key={index}>
-                      {option.name}
+                <select
+                  id="facilty"
+                  name="facilty"
+                  onChange={(event) => console.log(event.target.value)}
+                >
+                  <option value="null">Seçiniz</option>
+                  {data!.facilities.map((facility: any, index: number) => (
+                    <option value={facility} key={facility}>
+                      {facility}
                     </option>
                   ))}
                 </select>
               </div>
             </div>
-          ))}
-        </form>
+            {/* Fuel Source */}
+            <div className="mCustomInput">
+              <label className="customInputName">Fuel Source</label>
+              <div className="customInputBorder">
+                <select
+                  id="source"
+                  name="source"
+                  onChange={(event) => setSource(event.target.value)}
+                >
+                  <option value="null">Seçiniz</option>
+                  {data!.sources.map((source: any, index: number) => (
+                    <option value={source.id} key={source.name_tr}>
+                      {source.name_tr}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            {/* Fuel Type */}
+            <div className="mCustomInput">
+              <label className="customInputName">Fuel Type</label>
+              <div className="customInputBorder">
+                <select
+                  id="fuelType"
+                  name="fuelType"
+                  onChange={(event) => setFuelType(event.target.value)}
+                >
+                  <option value="null">Seçiniz</option>
+                  {data!.fuel_types.map((fuelType: any, index: number) =>
+                    fuelType.source_type_id == source ? (
+                      <option value={fuelType.id} key={fuelType.name_tr}>
+                        {fuelType.name_tr}
+                      </option>
+                    ) : (
+                      <></>
+                    )
+                  )}
+                </select>
+              </div>
+            </div>
+            {/* Fuel */}
+            <div className="mCustomInput">
+              <label className="customInputName">Fuel</label>
+              <div className="customInputBorder">
+                <select
+                  id="fuel"
+                  name="fuel"
+                  onChange={(event) => setFuel(event.target.value)}
+                >
+                  <option value="null">Seçiniz</option>
+                  {data!.fuels.map((fuel: any, index: number) =>
+                    fuel.fuel_type_id == fuelType ? (
+                      <option value={fuel.id} key={fuel.name_tr}>
+                        {fuel.name_tr}
+                      </option>
+                    ) : (
+                      <></>
+                    )
+                  )}
+                </select>
+              </div>
+            </div>
+          </form>
+        ) : (
+          <p>Yükleniyor...</p>
+        )}
       </div>
       {/* Sonuçlar */}
       <div className="resultArea"></div>

@@ -1,5 +1,5 @@
 "use client"
-import CustomButton from "@/components/customButton/index";
+import CustomButton from "@components/customButton/index";
 
 export default function Home() {
   return (

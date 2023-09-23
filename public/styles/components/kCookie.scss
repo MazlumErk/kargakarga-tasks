@@ -1,4 +1,8 @@
 .kCookie {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   padding: 20px 50px;
 
@@ -14,4 +18,7 @@
   font-weight: 400;
   line-height: 150%; /* 24px */
   letter-spacing: 0.32px;
+
+  .cookieExp {
+  }
 }

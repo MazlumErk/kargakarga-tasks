@@ -1,14 +1,15 @@
-"use client"
-import KCookie from "@/components/kCookie";
+"use client";
+
 // Components
+import KCookie from "@/components/kCookie";
 import KNav from "@/components/kNav";
 
-export default function kargakarga(){
-    return <main className="kargakarga">
-        <KNav />
+export default function kargakarga() {
+  return (
+    <main className="kargakarga">
+      <KNav />
 
-
-
-        <KCookie/>
+      <KCookie />
     </main>
+  );
 }
