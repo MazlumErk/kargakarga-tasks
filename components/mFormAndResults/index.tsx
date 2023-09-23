@@ -221,8 +221,8 @@ export default function MFormAndResults() {
         <h1 className="inputFormTitle">SONUÇ ALANI</h1>
         <hr style={{ width: 140, strokeWidth: 1, stroke: "#D0D0D0" }}></hr>
         <p className="inputExplanation">
-          Girdi Alanı'nda girdiğiniz değerlere göre salınan gaz miktarları
-          aşağıdaki gibidir:
+          `Girdi Alanı'nda girdiğiniz değerlere göre salınan gaz miktarları
+          aşağıdaki gibidir:`
         </p>
         {/* Sonuç kutuları */}
         {/* co2 */}
