@@ -1,9 +1,19 @@
 // React js
 import { useEffect, useState } from "react";
 
+
+// type
+type datas = {
+  sources: [],
+  facilities: [],
+  units: [],
+  fuel_types: [],
+  fuels: [],
+}
+
 export default function MFormAndResults() {
   // States
-  const [data, setData] = useState();
+  const [data, setData] = useState<datas>();
   const [isLoaded, setIsLoaded] = useState(false);
 
   // source
@@ -59,7 +69,7 @@ export default function MFormAndResults() {
                 >
                   <option value="null">Seçiniz</option>
                   {data!.facilities.map((facility: any, index: number) => (
-                    <option value={facility} key={facility}>
+                    <option value={facility} key={index}>
                       {facility}
                     </option>
                   ))}
@@ -77,7 +87,7 @@ export default function MFormAndResults() {
                 >
                   <option value="null">Seçiniz</option>
                   {data!.sources.map((source: any, index: number) => (
-                    <option value={source.id} key={source.name_tr}>
+                    <option value={source.id} key={index}>
                       {source.name_tr}
                     </option>
                   ))}
@@ -96,7 +106,7 @@ export default function MFormAndResults() {
                   <option value="null">Seçiniz</option>
                   {data!.fuel_types.map((fuelType: any, index: number) =>
                     fuelType.source_type_id == source ? (
-                      <option value={fuelType.id} key={fuelType.name_tr}>
+                      <option value={fuelType.id} key={index}>
                         {fuelType.name_tr}
                       </option>
                     ) : (
@@ -118,7 +128,7 @@ export default function MFormAndResults() {
                   <option value="null">Seçiniz</option>
                   {data!.fuels.map((fuel: any, index: number) =>
                     fuel.fuel_type_id == fuelType ? (
-                      <option value={fuel.id} key={fuel.name_tr}>
+                      <option value={fuel.id} key={index}>
                         {fuel.name_tr}
                       </option>
                     ) : (
