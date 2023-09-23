@@ -21,9 +21,10 @@
     background: #fff;
 
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
-    padding: 0px 50px 0px 30px;
+    padding: 0px 50px 10px 30px;
+    gap: 10px;
 
     input {
       width: 100%;
@@ -41,11 +42,18 @@
 
     select {
       width: 100%;
-      height: 30px;
+      height: 25px;
       border: none;
       border-bottom: 1px solid #086330;
+    }
 
-      select{
+    .units {
+      h6 {
+        color: #0d1840;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
     }
   }
