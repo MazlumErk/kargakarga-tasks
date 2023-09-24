@@ -11,7 +11,7 @@ import KStartTheProject from "@/components/kStartTheProject";
 import KFaq from "@/components/kFaq";
 import KLetsStart from "@/components/kLetsStart";
 
-export default function kargakarga() {
+export default function Kargakarga() {
   // states
   const [cookieUpdate, setCookieUpdate] = useState(true);
   return (
