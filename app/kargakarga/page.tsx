@@ -14,10 +14,14 @@ import KFooter from "@/components/kFooter";
 import KCustomerFeed from "@/components/kCustomerFeed";
 
 export default function Kargakarga() {
-  const isCookieSet = document.cookie
-    .split("; ")
-    .some((item) => item.startsWith("Cookie1="));
+  let isCookieSet;
+  if (typeof document !== "undefined") {
+    isCookieSet = document.cookie
+      .split("; ")
+      .some((item) => item.startsWith("Cookie1="));
 
+    // Manipulating the DOM here
+  }
   // states
   const [cookieUpdate, setCookieUpdate] = useState(true);
   return (
