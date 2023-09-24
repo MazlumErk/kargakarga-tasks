@@ -10,6 +10,7 @@ import KStaff from "@/components/kStaff";
 import KStartTheProject from "@/components/kStartTheProject";
 import KFaq from "@/components/kFaq";
 import KLetsStart from "@/components/kLetsStart";
+import KFooter from "@/components/kFooter";
 
 export default function Kargakarga() {
   // states
@@ -29,6 +30,7 @@ export default function Kargakarga() {
       <KStartTheProject />
       <KFaq/>
       <KLetsStart/>
+      <KFooter/>
     </main>
   );
 }
