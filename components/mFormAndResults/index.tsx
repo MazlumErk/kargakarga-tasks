@@ -78,7 +78,12 @@ export default function MFormAndResults() {
   // Formu resetlemek için
 
   const resetForm = () => {
-    document.getElementById("form")!.reset();
+    const formElement = document.getElementById(
+      "form"
+    ) as HTMLFormElement | null;
+    if (formElement) {
+      formElement.reset();
+    }
   };
 
   // useEffect
