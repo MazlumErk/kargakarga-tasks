@@ -1,0 +1,17 @@
+.kCustomerFeed {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 30px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+
+  .customerFeedCard {
+    width: 744px;
+    height: 430px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #f5f5f5;
+  }
+}

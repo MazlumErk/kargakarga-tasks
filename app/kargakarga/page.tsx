@@ -11,6 +11,7 @@ import KStartTheProject from "@/components/kStartTheProject";
 import KFaq from "@/components/kFaq";
 import KLetsStart from "@/components/kLetsStart";
 import KFooter from "@/components/kFooter";
+import KCustomerFeed from "@/components/kCustomerFeed";
 
 export default function Kargakarga() {
   // states
@@ -27,6 +28,7 @@ export default function Kargakarga() {
       )}
       <KOurServices />
       <KStaff />
+      {/* <KCustomerFeed/> */}
       <KStartTheProject />
       <KFaq/>
       <KLetsStart/>
