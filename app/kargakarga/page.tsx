@@ -14,7 +14,6 @@ import KLetsStart from "@/components/kLetsStart";
 export default function kargakarga() {
   // states
   const [cookieUpdate, setCookieUpdate] = useState(true);
-  const [cookies, setCookie] = useCookies(["Cookie1", "Cookie2"]);
   return (
     <main className="kargakarga">
       <KNav />
