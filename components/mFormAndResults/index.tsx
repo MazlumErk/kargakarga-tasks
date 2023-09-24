@@ -20,7 +20,12 @@ type results = {
 export default function MFormAndResults() {
   // States
   const [data, setData] = useState<datas>(); // form data
-  const [resultData, setResultData] = useState<results>({co2: "",ch4: "", no2: "", co2e : ""});
+  const [resultData, setResultData] = useState<results>({
+    co2: "",
+    ch4: "",
+    no2: "",
+    co2e: "",
+  });
   const [isFormLoaded, setIsFormLoaded] = useState(false); // form yüklendi mi
   const [isResultLoaded, setIsResultLoaded] = useState(false); // cevap yüklendi mi
 
@@ -51,7 +56,7 @@ export default function MFormAndResults() {
       console.log(error);
     }
   };
-// sonuçları almak için
+  // sonuçları almak için
   const getResults = async () => {
     try {
       const response = await fetch(
@@ -74,8 +79,7 @@ export default function MFormAndResults() {
 
   const resetForm = () => {
     document.getElementById("form")!.reset();
-  }
-
+  };
 
   // useEffect
   useEffect(() => {
@@ -221,40 +225,47 @@ export default function MFormAndResults() {
         <h1 className="inputFormTitle">SONUÇ ALANI</h1>
         <hr style={{ width: 140, strokeWidth: 1, stroke: "#D0D0D0" }}></hr>
         <p className="inputExplanation">
-          `Girdi Alanı'nda girdiğiniz değerlere göre salınan gaz miktarları
-          aşağıdaki gibidir:`
+          Girdi Alanı&apos;nda girdiğiniz değerlere göre salınan gaz miktarları
+          aşağıdaki gibidir:
         </p>
         {/* Sonuç kutuları */}
         {/* co2 */}
         <div className="mResultBox">
           <div className="resultName">
-            <h4>CO<sub>2</sub></h4>
+            <h4>
+              CO<sub>2</sub>
+            </h4>
           </div>
           {isFormLoaded && <p>{resultData!.co2}</p>}
         </div>
         {/* ch4 */}
         <div className="mResultBox">
           <div className="resultName">
-            <h4>CH<sub>4</sub></h4>
+            <h4>
+              CH<sub>4</sub>
+            </h4>
           </div>
           {isFormLoaded && <p>{resultData!.ch4}</p>}
         </div>
         {/* n2o */}
         <div className="mResultBox">
           <div className="resultName">
-            <h4>N<sub>2</sub>O</h4>
+            <h4>
+              N<sub>2</sub>O
+            </h4>
           </div>
           {isFormLoaded && <p>{resultData!.no2}</p>}
         </div>
         {/* co2e */}
         <div className="mResultBox">
           <div className="resultName">
-            <h4>CO<sub>2</sub>e</h4>
+            <h4>
+              CO<sub>2</sub>e
+            </h4>
           </div>
           {isFormLoaded && <p>{resultData!.co2e}</p>}
         </div>
-        <input type="button" value="aa" onClick={() => resetForm()}/>
-        
+        <input type="button" value="aa" onClick={() => resetForm()} />
       </div>
     </div>
   );
