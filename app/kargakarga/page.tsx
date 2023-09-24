@@ -19,8 +19,6 @@ export default function Kargakarga() {
     isCookieSet = document.cookie
       .split("; ")
       .some((item) => item.startsWith("Cookie1="));
-
-    // Manipulating the DOM here
   }
   // states
   const [cookieUpdate, setCookieUpdate] = useState(true);
