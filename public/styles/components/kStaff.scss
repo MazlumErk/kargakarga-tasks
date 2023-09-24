@@ -1,0 +1,25 @@
+.kStaff{
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .titleAndParagraf{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        @media (width < 700px) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .staffCards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+}

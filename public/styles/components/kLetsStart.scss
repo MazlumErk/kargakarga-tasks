@@ -1,0 +1,37 @@
+.kLetsStart {
+  width: 100%;
+  height: 800px;
+  background: #294dfa;
+
+  padding: 50px;
+
+  display: flex;
+  flex-direction: row;
+
+  @media (width < 900px) {
+    flex-direction: column;
+    height: min-content;
+  }
+
+  .letsStartForm {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+
+    p {
+      color: #f6f8ff;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 48px */
+      letter-spacing: 0.64px;
+    }
+  }
+
+  .galery {
+    flex: 5;
+  }
+}

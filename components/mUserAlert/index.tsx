@@ -16,7 +16,6 @@ export default function UserAlert() {
       <MNotification />
       <div className="manImage">
         <Image src={karakter_erkek} alt={""} className="man"></Image>
-        <div className="mask"></div>
         <p className="dijitalMentor">Dijital Mentor</p>
         <BsChevronDown></BsChevronDown>
       </div>

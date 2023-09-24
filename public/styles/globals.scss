@@ -3,33 +3,43 @@
 @tailwind utilities;
 
 // Variables
-@import './variables';
+@import "./variables";
 
 // Pages
-@import './pages/home.scss';
-@import './pages/mobile.scss';
-@import './pages/kargakarga.scss';
+@import "./pages/home.scss";
+@import "./pages/mobile.scss";
+@import "./pages/kargakarga.scss";
 
 // Components
-@import './components/customButton.scss';
+@import "./components/customButton.scss";
 
 // Components-Mobile
-@import './components/mNav.scss';
-@import './components/mUserAlert.scss';
-@import './components/mTitleBoard.scss';
-@import './components/mFormAndResults.scss';
-@import './components/mCustomInput.scss';
-@import './components/mResultBox.scss';
+@import "./components/mNav.scss";
+@import "./components/mUserAlert.scss";
+@import "./components/mTitleBoard.scss";
+@import "./components/mFormAndResults.scss";
+@import "./components/mCustomInput.scss";
+@import "./components/mResultBox.scss";
+@import "./components/mCustomButton.scss";
+@import "./components/mFRAndTable.scss";
 
 // Components-Kargakarga
-@import './components/kNav.scss';
-@import './components/kLogo.scss';
-@import './components/kCustomNavButton.scss';
-@import './components/kCookie.scss';
-@import './components/kCustomButton.scss';
-
-
-
+@import "./components/kNav.scss";
+@import "./components/kLogo.scss";
+@import "./components/kCustomNavButton.scss";
+@import "./components/kCookie.scss";
+@import "./components/kCustomButton.scss";
+@import "./components/kOurServices.scss";
+@import "./components/kServiceCard.scss";
+@import "./components/kParticle.scss";
+@import "./components/kTitle.scss";
+@import "./components/kStaff.scss";
+@import "./components/kStaffCard.scss";
+@import "./components/kStartTheProject.scss";
+@import "./components/kFaq.scss";
+@import "./components/kFaqCard.scss";
+@import "./components/kLetsStart.scss";
+@import "./components/kLetsStartForm.scss";
 
 // global
 

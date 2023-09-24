@@ -1,0 +1,48 @@
+.kStartTheProject {
+  @media (width < 700px) {
+    display: none;
+    opacity: 0;
+  }
+  display: flex;
+  width: 100%;
+  height: 550px;
+  max-width: 1200px;
+  border-radius: 16px;
+  border-top: 1px solid #fff;
+  background: #0b1519;
+  align-items: end;
+
+  .buttonAndTitleArea {
+    padding: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    flex: 1;
+
+    .btnAndContact {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      gap: 10px;
+
+      p {
+        width: 130px;
+      }
+    }
+  }
+
+  .imageArea {
+    flex: 1;
+    display: flex;
+
+    .phone{
+      position: relative;
+      bottom: 0px;
+      width: 700px;
+      height: 450px;
+    }
+  }
+}

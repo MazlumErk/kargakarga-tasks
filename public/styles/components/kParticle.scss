@@ -1,0 +1,13 @@
+.kParticle {
+  position: absolute;
+  z-index: -1;
+  width: 450px;
+  height: 450px;
+  flex-shrink: 0;
+  border-radius: 450px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #4148ff 0%,
+    rgba(65, 72, 255, 0) 100%
+  );
+}

@@ -1,0 +1,38 @@
+.mFRAndTable {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+
+  .savedResults {
+    margin: 20px;
+    th {
+      background: #0d1840;
+      padding: 10px;
+
+      color: #fff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      &:first-child {
+        border-radius: 10px 0px 0px 10px;
+      }
+      &:last-child {
+        border-radius: 0px 10px 10px 0px;
+        width: 100px;
+      }
+    }
+
+    td {
+      text-align: center;
+    }
+
+    .tableButtons{
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+  }
+}
