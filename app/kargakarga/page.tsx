@@ -14,12 +14,16 @@ import KFooter from "@/components/kFooter";
 import KCustomerFeed from "@/components/kCustomerFeed";
 
 export default function Kargakarga() {
+  const isCookieSet = document.cookie
+    .split("; ")
+    .some((item) => item.startsWith("Cookie1="));
+
   // states
   const [cookieUpdate, setCookieUpdate] = useState(true);
   return (
     <main className="kargakarga">
       <KNav />
-      {cookieUpdate && (
+      {!isCookieSet && cookieUpdate && (
         <KCookie
           func={function () {
             setCookieUpdate(false);
@@ -30,9 +34,9 @@ export default function Kargakarga() {
       <KStaff />
       {/* <KCustomerFeed/> */}
       <KStartTheProject />
-      <KFaq/>
-      <KLetsStart/>
-      <KFooter/>
+      <KFaq />
+      <KLetsStart />
+      <KFooter />
     </main>
   );
 }
